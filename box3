@@ -1,0 +1,21 @@
+Class Box {
+    constructor(450,y,20,100) {
+        var options = {
+            isStatic: true
+        }
+        this.body = Bodies.rectangle(450,y,20,100,options)
+        this.width = 20
+        this.height = 100;
+        World.add(world,this.body);
+    }
+    display(){
+        var pos =this.body.position;
+        var angle = this.body.angle
+        push();
+        translate(pos.x,pos.y);
+        rectMode(CENTER);
+        fill("red");
+        rect(450,0,this.width,this.height);
+        pop();
+    }
+}
